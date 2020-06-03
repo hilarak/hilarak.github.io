@@ -1,37 +1,60 @@
-## Welcome to GitHub Pages
+# AUTO BACKUP ODOO DATABASES
+**Available Backup DB/Filestore Modes:**
+* **Local**
+* **Remote Server**
+* **Google Drive**
+* **Dropbox**
 
-You can use the [editor on GitHub](https://github.com/hilarak/hilarak.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+**Module For backup ODOO databases and automating the backup process of ODOO.**
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+* Multiple Backup Modes
+* Filestore Backup
+* Multiple Usage Of Modes Are Possible
+* Backup ODOO Databases in specified path
+* Detailed Message Log
+* Backup Status Information and History
+* User can select the format to dump, either custom archive, plain text SQL or tar archive
+* Manage Backup Process by making active or inactive
+* Repeat Missed Backup Process
 
-### Markdown
+# Features
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+* Dump ODOO Database in specified format
+* Output a custom archive suitable for input into pg_restore. This is the most flexible format in that it allows the reordering of loading data as well as to object definitions. This format is also compressed by default.        Here we user gzip ie, test.gz, We also recommend you to select Custom, because Using the custom format you can restore single objects from a backup.
+* Output a plain-text SQL script file (the default).        The plain text format is useful for very small databases with a minimal number of objects but other than that, it should be avoided.
+* Output a tar archive suitable for input into pg_restore. Using this archive format allows reordering and/or exclusion of database objects at the time the database is restored. It is also possible to limit which data is reloaded at restore time.        we use tar with gzip
+* Backup Filestore
 
-```markdown
-Syntax highlighted code block
+# ScreenShots
 
-# Header 1
-## Header 2
-### Header 3
 
-- Bulleted
-- List
+### Tech
 
-1. Numbered
-2. List
+Auto Backup Module uses
 
-**Bold** and _Italic_ and `Code` text
+* [PYTHON](https://www.python.org/) - Models
+* [XML](https://www.w3.org/XML/) - Views
+* [HTML](https://www.w3.org/html/) - UI
+* [Twitter Bootstrap](http://getbootstrap.com/2.3.2/) - UI
+* [backbone.js](http://backbonejs.org/) - Views
+* [jQuery](https://jquery.com/)
+* [PSQL](https://www.postgresql.org/) - DB
 
-[Link](url) and ![Image](src)
-```
+### External Dependencies
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+*  [pysftp](https://pypi.org/project/pysftp/) `pip install pysftp`
 
-### Jekyll Themes
+### Installation
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/hilarak/hilarak.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+Install the odoo13 and Auto Backup module. After installation you can configure backup under general settings.
 
-### Support or Contact
+### Todos
+* Amazon S3 Backup
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+### Author
+
+[Hilar AK](https://www.linkedin.com/in/hilar-ak/)
+
+### Git Repository
+
+[Hilar AK](https://github.com/hilarak)
